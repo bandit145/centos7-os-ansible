@@ -6,7 +6,7 @@ This is for use with molecule to test Ansible roles that are meant to run agains
 Molecule platform config to run this containere properly:
 ```
 platforms:
-  -	name: random_name
+  - name: random_name
     image:  bandit145/centos7-os-ansible
     privileged: true
     pre_build_image: true
