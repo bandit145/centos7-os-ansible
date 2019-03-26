@@ -1,0 +1,13 @@
+language: bash
+services:
+- docker
+stages:
+- test
+- build
+jobs:
+  include:
+  - stage: test
+    script:
+      - docker build -t local/test-cont . 
+      -  "/bin/bash test.sh"
+    if: type = pull_request
